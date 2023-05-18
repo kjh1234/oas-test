@@ -4,7 +4,7 @@ info:
   version: '1.0'
   license: 
     name: ""
-    url: "."
+    url: "http://localhost"
     
 servers:
   - url: https://api.server.test/v1
