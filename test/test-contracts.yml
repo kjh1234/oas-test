@@ -1,0 +1,20 @@
+contractTests:
+  - openApiOperation: '*::/articles'
+    statusSuccess:
+      enabled: true
+    schemaValidation:
+      enabled: true
+#   responseTime:
+#     enabled: true
+#     maxMs: 300
+#   contentType:
+#     enabled: true
+#   jsonBody:
+#     enabled: true
+#   headersPresent:
+#     enabled: true
+  - openApiOperation: '*::/articles/*'
+    excludeForOperations:
+      - 'GET::/articles/{articleId}/comments'
+    statusSuccess:
+      enabled: true

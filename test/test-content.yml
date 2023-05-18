@@ -1,0 +1,5 @@
+contentTests:
+  - openApiOperationId: getArticle
+    responseBodyTests:
+      - key: 'article.tagList[0]'
+        # value: rerum  # value equals check

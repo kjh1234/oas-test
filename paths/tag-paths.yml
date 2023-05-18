@@ -1,0 +1,31 @@
+openapi: "3.0.0"
+info:
+  title: API Title
+  version: '1.0'
+servers: 
+  - url: http://localhost:4010
+paths:
+  /tags: 
+    get: 
+      security: []
+      tags: 
+        - "tags"
+      summary: "api/tags"
+      operationId: "getTags"
+      parameters: []
+      responses: 
+        200: 
+          description: ""
+          content: 
+            application/json: 
+              schema:
+                $ref: "../schemas/tags-schemas.yml#/components/schemas/tags"
+              example: 
+                $ref: "../mockup/tags-data.yml#/tags"
+                  
+        default: 
+          description: "Unexpected error"
+          content: 
+            application/json: 
+              example: 
+                message: "Sorry unable to perform operation."

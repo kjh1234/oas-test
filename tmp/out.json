@@ -1,0 +1,608 @@
+{
+  "_": {
+    "postman_id": "56c9b717-0c37-419d-b20b-1b12c55751f7"
+  },
+  "item": [
+    {
+      "id": "40a6c2c0-86a5-46ad-bf6d-855d2f130dde",
+      "name": "tags",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c6f66d4f-ed1b-48de-9754-9a6a82c9a525",
+          "name": "api/tags",
+          "request": {
+            "name": "api/tags",
+            "description": {
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tags"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "50d0110a-749b-406f-a853-7812e91b31c2",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"tags\": [\n    \"implementations\",\n    \"welcome\",\n    \"introduction\"\n  ]\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "5926fe61-2ca6-4eb2-9e31-965e22037323",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tags"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Sorry unable to perform operation.\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "ed9842ca-2e63-4fac-b055-cab70cfb5207",
+      "name": "article",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b75e973d-36c5-405c-a1e2-7d03cff96c2a",
+          "name": "api/articles",
+          "request": {
+            "name": "api/articles",
+            "description": {
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "articles"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "(Required) ",
+                    "type": "text/plain"
+                  },
+                  "key": "limit",
+                  "value": "100"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "(Required) ",
+                    "type": "text/plain"
+                  },
+                  "key": "offset",
+                  "value": "0"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "64794f47-2961-47fa-a6fd-fcaf0d3fee57",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"articles\": [\n    {\n      \"slug\": \"Deserunt-exercitationem-eos-facilis-in-sed-sunt-enim-id-blanditiis-voluptatibus-vel-maiores-quos-ullam-vitae-exercitationem-omnis-aliquid-fugiat.-Repellat-deserunt-blanditiis-unde.-Exercitationem-ducimus-nostrum-vitae-voluptatibus-qui-blanditiis-voluptatibus-quaerat-quae-sed-quaerat-consectetur-doloribus-omnis-quia-ipsum-aliquid-repellat-repellat-ullam-quaerat-deserunt-eos.-Quasi-consequuntur-voluptatem-sequi-vitae-sit-ipsum-qui-possimus-qui-vitae-repellat-doloribus-sit-occaecati-neque-nihil-voluptatibus-quaerat-dolores-magnam-rerum-reiciendis-sapiente.-Quasi-commodi-sapiente-ullam-eos-voluptatibus-hic-ipsum-exercitationem-unde-hic-occaecati-fugiat-sapiente-tenetur-consequuntur-enim-esse-omnis-exercitationem-dolores.-105569\",\n      \"title\": \"Deserunt exercitationem eos facilis in sed sunt enim id blanditiis voluptatibus vel maiores quos ullam vitae exercitationem omnis aliquid fugiat.\\nRepellat deserunt blanditiis unde.\\nExercitationem ducimus nostrum vitae voluptatibus qui blanditiis voluptatibus quaerat quae sed quaerat consectetur doloribus omnis quia, ipsum, aliquid repellat repellat ullam quaerat deserunt, eos.\\nQuasi consequuntur voluptatem sequi, vitae sit ipsum qui possimus qui vitae repellat doloribus sit occaecati neque nihil voluptatibus quaerat dolores magnam, rerum reiciendis sapiente.\\nQuasi commodi sapiente ullam eos voluptatibus, hic ipsum exercitationem unde hic occaecati fugiat, sapiente tenetur consequuntur enim esse omnis exercitationem dolores.\\n\",\n      \"description\": \"Tempora id non maxime. Qui qui dignissimos omnis adipisci qui. Voluptatibus ut labore est quisquam consequuntur fugiat harum tenetur est. Repellendus quisquam quaerat error nobis voluptatem nihil minima. Autem aliquid ut adipisci officia eos atque excepturi.\",\n      \"body\": \"Pariatur quo neque est perspiciatis non illo rerum expedita minima.\\\\nEt commodi voluptas eos ex.\\\\nUnde velit delectus deleniti deleniti non in sit.\\\\nAliquid voluptatem magni. Ducimus dolores recusandae.\\\\nEa aut aperiam et aut eos inventore.\\\\nQuia cum ducimus autem iste.\\\\nQuos consequuntur est delectus temporibus autem. Deserunt ab porro similique est accusamus id enim aut suscipit.\\\\nSoluta reprehenderit error nesciunt odit veniam sed.\\\\nDolore optio qui aut ab.\\\\nAut minima provident eius repudiandae a quibusdam in nisi quam. Voluptatem velit ut deserunt.\\\\nQuibusdam eius repellat. Officia consectetur quibusdam velit debitis porro quia cumque.\\\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\\\nMollitia pariatur distinctio fugit. Provident saepe omnis non molestiae natus et.\\\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\\\nMollitia velit id eius mollitia occaecati repudiandae. Laborum est maxime enim accusantium magnam.\\\\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\\\\nDeleniti consequatur explicabo aut nobis est vero tempore.\\\\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\\\\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Ut in omnis sapiente laboriosam autem laborum.\\\\nRepellendus et beatae qui qui numquam saepe.\\\\nNon vitae molestias quos illum.\\\\nSed fugiat qui ullam molestias ad ullam dolore.\\\\nAutem ex minus distinctio dicta sapiente beatae veritatis at. Consequatur exercitationem asperiores quidem fuga rerum voluptas pariatur.\\\\nRepellendus sit itaque nam.\\\\nDeleniti consectetur vel aliquam vitae est velit.\\\\nId blanditiis ullam sed consequatur omnis. Ipsa laudantium deserunt.\",\n      \"tagList\": [\n        \"voluptate\",\n        \"quasi\",\n        \"ullam\"\n      ],\n      \"createdAt\": \"2022-10-09T10:07:29.447Z\",\n      \"updatedAt\": \"2022-10-09T10:07:29.447Z\",\n      \"favorited\": false,\n      \"favoritesCount\": 0,\n      \"author\": {\n        \"username\": \"Lyudmila Kjartansson\",\n        \"bio\": null,\n        \"image\": \"https://api.realworld.io/images/demo-avatar.png\",\n        \"following\": false\n      }\n    },\n    {\n      \"slug\": \"Quos-omnis-dicta-quaerat-laborum-qui-aut-id-blanditiis-quos-hic-quasi.-Esse-voluptatem-quasi-beatae-rerum-beatae-id.-Nemo-ipsum-quia-dicta-quaerat-labore-esse-omnis-esse-sed-facilis-commodi-sed-sunt-reiciendis-excepturi-nostrum-voluptatibus-sunt-quaerat-exercitationem-vitae-commodi-voluptatem-aliquid-sapiente-omnis-blanditiis-commodi-dicta-fugit-fugiat-nostrum-labore-maiores-occaecati-qui-consequatur-consectetur-cupiditate-rerum-sunt-magnam-blanditiis-commodi-quos-quos-excepturi-laborum-voluptatibus.-Quos-sed-non-aut-fugiat-est-magnam-ullam-id-deserunt-fugit-facilis-deserunt-ullam-nemo-fugiat-reiciendis-esse-necessitatibus-qui-tenetur-quia-voluptate-sit-esse-et-quaerat-voluptatem-sed-beatae-numquam-est-esse-vitae-eos-fugit-consequuntur-beatae-quia-omnis-unde-fugiat-quaerat-non-est-dicta-voluptatem-eos-nulla-commodi.-Reiciendis-reiciendis-magnam-excepturi.-105569\",\n      \"title\": \"Quos omnis dicta quaerat laborum qui aut id blanditiis quos hic quasi.\\nEsse voluptatem quasi beatae rerum beatae id.\\nNemo ipsum quia dicta quaerat labore esse omnis esse sed facilis commodi sed sunt reiciendis excepturi nostrum voluptatibus sunt quaerat exercitationem vitae commodi voluptatem aliquid sapiente omnis blanditiis commodi dicta fugit fugiat nostrum labore maiores occaecati qui consequatur consectetur cupiditate rerum sunt magnam blanditiis commodi quos quos excepturi, laborum, voluptatibus.\\nQuos sed non aut fugiat est magnam ullam id deserunt fugit facilis deserunt ullam nemo fugiat reiciendis esse necessitatibus qui tenetur quia voluptate, sit esse et quaerat voluptatem sed beatae numquam, est esse vitae eos fugit consequuntur beatae quia omnis unde fugiat quaerat non est dicta voluptatem eos nulla commodi.\\nReiciendis reiciendis magnam excepturi.\\n\",\n      \"description\": \"Deserunt laboriosam quas autem repellat aspernatur ipsa accusamus pariatur deserunt. Nam aut eum vel ut. Sunt dicta id eveniet minus. Debitis temporibus quod.\",\n      \"body\": \"Laborum itaque quos provident.\\\\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\\\\nVoluptates assumenda optio est.\\\\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\\\\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\\\\nVoluptate consequatur expedita nemo recusandae sint assumenda.\\\\nQui vel totam quia fugit saepe suscipit autem quasi qui.\\\\nEt eum vel ut delectus ut nesciunt animi. Qui soluta veritatis autem repellat et inventore occaecati. Blanditiis non quos aut dolore nulla unde.\\\\nIncidunt repudiandae amet eius porro.\\\\nTempora unde sapiente repellat voluptatem omnis et ut omnis in.\\\\nEt pariatur odit qui minima perspiciatis non dolores. Deleniti explicabo assumenda ipsum cumque voluptatem blanditiis voluptatum omnis provident.\\\\nQuis placeat nisi fugit aperiam quaerat mollitia.\\\\nOccaecati repellendus voluptate similique.\\\\nLaboriosam qui qui voluptas itaque ipsa. Non enim expedita maiores incidunt voluptatem rem.\\\\nEt nam vel nihil non non.\\\\nVoluptates accusantium aut nisi et error doloribus molestiae voluptas soluta. Aut ipsa et qui vel similique sed hic a.\\\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\\\\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\\\\nLibero sit quibusdam corporis aut inventore natus libero.\\\\nPraesentium omnis dolorum temporibus repellendus qui.\\\\nNon nostrum doloribus occaecati dolores sit ut. Libero sed ut architecto.\\\\nEx itaque et modi aut voluptatem alias quae.\\\\nModi dolor cupiditate sit.\\\\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\\\\nCorrupti in labore laborum quod. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\\\\nOdit eum eum sint accusamus.\\\\nQuod ipsum sed placeat.\\\\nEt culpa voluptas et quod atque a.\\\\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor.\",\n      \"tagList\": [\n        \"rerum\",\n        \"eos\",\n        \"ducimus\",\n        \"in\"\n      ],\n      \"createdAt\": \"2022-10-09T10:07:29.446Z\",\n      \"updatedAt\": \"2022-10-09T10:07:29.446Z\",\n      \"favorited\": false,\n      \"favoritesCount\": 1,\n      \"author\": {\n        \"username\": \"Lyudmila Kjartansson\",\n        \"bio\": null,\n        \"image\": \"https://api.realworld.io/images/demo-avatar.png\",\n        \"following\": false\n      }\n    },\n    {\n      \"slug\": \"Occaecati-laborum-neque-neque-quae-occaecati-sed.-Asperiores-omnis-nihil-in-sunt-quas-voluptate-qui-dolores-reiciendis-repellat-facilis-quas-excepturi-maiores-facilis.-Beatae-fugiat-exercitationem-enim-error-voluptatibus-fugit-beatae-quos-asperiores-vitae-voluptatibus-unde-voluptate-sed-ducimus-vel-hic-aliquid-laborum-voluptatibus-repellat-numquam-maiores-laborum-error-fugit-nemo-nostrum-id-non-at-nulla-reiciendis-laborum-doloribus-vitae-non-et-vitae-nemo-quia-nihil-magnam-fugit-fugiat-nemo-sequi-fugit-nulla.-Nemo-laborum-numquam-sequi-commodi-occaecati-labore-reiciendis-excepturi-dolores-nihil-enim-dolores-sit-nulla-at-quasi-numquam-voluptate-necessitatibus-esse-sequi-enim-fugit-et-laborum-repellat-error-consequuntur-quaerat-exercitationem-quos-asperiores-dicta-sapiente-occaecati-esse-nemo-nihil-consequuntur-sed-ipsum-fugiat-deserunt-quaerat-sed-voluptate-consequatur-unde-quasi.-Vitae-aut-id-rerum-sunt-qui-magnam-quae-ipsum-laborum-voluptatem-beatae-quos-nulla-blanditiis-deserunt-cupiditate-labore-ullam-hic-consequuntur-possimus-possimus-est-sequi-neque-doloribus-esse-rerum-error-vel-fugit-sed-cupiditate-esse-quia-repellat-numquam-voluptatem-enim-ipsum-voluptate-sapiente-esse-error-occaecati-beatae-et-sunt.-105569\",\n      \"title\": \"Occaecati laborum neque neque quae occaecati sed.\\nAsperiores omnis nihil in sunt quas voluptate qui dolores reiciendis repellat facilis quas excepturi maiores facilis.\\nBeatae fugiat exercitationem enim error voluptatibus fugit, beatae, quos asperiores, vitae voluptatibus unde voluptate sed ducimus vel hic aliquid laborum voluptatibus repellat numquam maiores laborum error, fugit nemo nostrum, id non at, nulla reiciendis laborum doloribus vitae non, et vitae, nemo quia nihil magnam fugit fugiat nemo sequi fugit nulla.\\nNemo laborum numquam sequi, commodi occaecati labore reiciendis, excepturi dolores nihil enim dolores sit, nulla at quasi numquam voluptate necessitatibus esse, sequi enim fugit et laborum repellat error, consequuntur quaerat, exercitationem quos asperiores dicta sapiente occaecati esse nemo nihil, consequuntur, sed ipsum fugiat deserunt quaerat sed, voluptate consequatur unde quasi.\\nVitae aut id rerum sunt qui magnam quae ipsum laborum voluptatem, beatae quos nulla blanditiis, deserunt cupiditate labore ullam, hic consequuntur possimus possimus est sequi neque doloribus esse rerum error vel fugit sed cupiditate esse quia, repellat numquam voluptatem enim ipsum voluptate sapiente esse error occaecati beatae et sunt.\\n\",\n      \"description\": \"Similique molestiae id officia corporis quidem. Aliquam et ut eos ut nemo est voluptatem. Possimus ut quo labore. Alias amet quia enim. Quia ipsum pariatur facere illum esse recusandae veniam. Nihil enim fugit porro nam et quis sunt.\",\n      \"body\": \"In ipsam mollitia placeat quia adipisci rerum labore repellat. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. In ipsam mollitia placeat quia adipisci rerum labore repellat. Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Quia consequatur voluptatibus et.\\\\nVoluptatibus aspernatur et.\\\\nDicta architecto qui dignissimos.\\\\nVeritatis facilis voluptatem inventore aliquid cum.\\\\nNumquam odio quis porro sunt adipisci culpa. Officia consectetur quibusdam velit debitis porro quia cumque.\\\\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\\\\nMollitia pariatur distinctio fugit. Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\\\nAspernatur cumque labore voluptates mollitia deleniti et. Exercitationem suscipit enim et aliquam dolor. Quia consequatur voluptatibus et.\\\\nVoluptatibus aspernatur et.\\\\nDicta architecto qui dignissimos.\\\\nVeritatis facilis voluptatem inventore aliquid cum.\\\\nNumquam odio quis porro sunt adipisci culpa.\",\n      \"tagList\": [\n        \"dolores\",\n        \"est\",\n        \"quaerat\",\n        \"magnam\"\n      ],\n      \"createdAt\": \"2022-10-09T10:07:29.446Z\",\n      \"updatedAt\": \"2022-10-09T10:07:29.446Z\",\n      \"favorited\": false,\n      \"favoritesCount\": 0,\n      \"author\": {\n        \"username\": \"Lyudmila Kjartansson\",\n        \"bio\": null,\n        \"image\": \"https://api.realworld.io/images/demo-avatar.png\",\n        \"following\": false\n      }\n    }\n  ],\n  \"articlesCount\": 197\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "bed50baf-29a9-4f7f-8b40-5e1b56e7ee17",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Sorry unable to perform operation.\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b79da5e7-9d4d-403b-b142-882052200cda",
+                "type": "text/javascript",
+                "exec": [
+                  "// Validate status 2xx \npm.test(\"[GET]::/articles - Status code is 2xx\", function () {\n   pm.response.to.be.success;\n});\n",
+                  "// Response Validation\nconst schema = {\"type\":\"object\",\"properties\":{\"articles\":{\"type\":\"array\",\"items\":{\"required\":[\"slug\",\"title\",\"description\",\"body\",\"tagList\",\"createdAt\",\"updatedAt\",\"favorited\",\"favoritesCount\",\"author\"],\"type\":\"object\",\"properties\":{\"article\":{\"type\":\"object\",\"properties\":{\"slug\":{\"type\":\"string\"},\"title\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"body\":{\"type\":\"string\"},\"tagList\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"createdAt\":{\"type\":\"string\"},\"updatedAt\":{\"type\":\"string\"},\"favorited\":{\"type\":\"boolean\"},\"favoritesCount\":{\"type\":\"number\"},\"author\":{\"type\":\"object\",\"properties\":{\"username\":{\"type\":\"string\"},\"bio\":{\"type\":[\"string\",\"null\"]},\"image\":{\"type\":\"string\"},\"following\":{\"type\":\"boolean\"}}}}}}}},\"articlesCount\":{\"type\":\"number\"}}}\n\n// Validate if response matches JSON schema \npm.test(\"[GET]::/articles - Schema is valid\", function() {\n    pm.response.to.have.jsonSchema(schema,{unknownFormats: [\"int32\", \"int64\", \"float\", \"double\"]});\n});\n"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e3d0a6ad-6e8f-4ab1-b7d7-b2abcd720f28",
+          "name": "api",
+          "request": {
+            "name": "api",
+            "description": {
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "articles",
+                ":articleId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "(Required) The name that needs to be fetched",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                  "key": "articleId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "cea64d81-c29f-4a05-91ee-7f5517a3cf6f",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles",
+                    ":articleId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The name that needs to be fetched",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                      "key": "articleId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"article\": {\n    \"slug\": \"If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863\",\n    \"title\": \"If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!\",\n    \"description\": \"Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.\",\n    \"body\": \"Quia quo iste et aperiam voluptas consectetur a omnis et.\\\\nDolores et earum consequuntur sunt et.\\\\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\\\\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\\\\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\\\\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\\\\nPraesentium quas culpa.\\\\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\\\\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\\\\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\\\\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\\\\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\\\\nTenetur facere eum distinctio animi qui laboriosam.\\\\nQuod sed voluptatem et cumque est eos.\\\\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\\\\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\\\\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\\\\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\\\\nSoluta reprehenderit error nesciunt odit veniam sed.\\\\nDolore optio qui aut ab.\\\\nAut minima provident eius repudiandae a quibusdam in nisi quam.\",\n    \"tagList\": [\n      \"rerum\",\n      \"maiores\",\n      \"omnis\"\n    ],\n    \"createdAt\": \"2022-12-09T13:46:24.264Z\",\n    \"updatedAt\": \"2022-12-09T13:46:24.264Z\",\n    \"favorited\": false,\n    \"favoritesCount\": 1131,\n    \"author\": {\n      \"username\": \"Anah Benešová\",\n      \"bio\": null,\n      \"image\": \"https://api.realworld.io/images/demo-avatar.png\",\n      \"following\": false\n    }\n  }\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "775de7fe-ab9c-4783-bfde-2c3bae1e60b5",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles",
+                    ":articleId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The name that needs to be fetched",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                      "key": "articleId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Sorry unable to perform operation.\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "332f15ef-f5e1-44de-a735-fce249c980df",
+                "type": "text/javascript",
+                "exec": [
+                  "// Validate status 2xx \npm.test(\"[GET]::/articles/:articleId - Status code is 2xx\", function () {\n   pm.response.to.be.success;\n});\n",
+                  "// Set response object as internal variable\nlet jsonData = {};\ntry {jsonData = pm.response.json();}catch(e){}\n",
+                  "// Set property value as variable\nconst _resArticleTagList0 = jsonData?.article?.tagList?.[0];\n",
+                  "// Response body should have \"article.tagList[0]\"\npm.test(\"[GET]::/articles/:articleId - Content check if 'article.tagList[0]' exists\", function() {\n   pm.expect(_resArticleTagList0 !== undefined).to.be.true;\n});\n"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c8ff85bf-0628-4564-a308-5deb11f59ce7",
+          "name": "api",
+          "request": {
+            "name": "api",
+            "description": {
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "articles",
+                ":articleId",
+                "comments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "(Required) The name that needs to be fetched",
+                    "type": "text/plain"
+                  },
+                  "type": "any",
+                  "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                  "key": "articleId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET"
+          },
+          "response": [
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "e4f0108f-e847-4add-8b4d-e79a4b1c8bb7",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles",
+                    ":articleId",
+                    "comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The name that needs to be fetched",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                      "key": "articleId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"comments\": []\n}",
+              "cookie": []
+            },
+            {
+              "_": {
+                "postman_previewlanguage": "json"
+              },
+              "id": "eacfdf69-76f2-4fe8-9969-86352de1f38b",
+              "name": "Unexpected error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "articles",
+                    ":articleId",
+                    "comments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "description": {
+                        "content": "(Required) The name that needs to be fetched",
+                        "type": "text/plain"
+                      },
+                      "type": "any",
+                      "value": "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863",
+                      "key": "articleId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"message\": \"Sorry unable to perform operation.\"\n}",
+              "cookie": []
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost:4010",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "56c9b717-0c37-419d-b20b-1b12c55751f7",
+    "name": "API Title",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

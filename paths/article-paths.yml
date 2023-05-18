@@ -1,0 +1,86 @@
+openapi: "3.0.0"
+info:
+  title: API Title
+  version: '1.0'
+servers: 
+  - url: http://localhost:4010
+paths:
+  /articles: 
+    get: 
+      security: []
+      tags: 
+        - "article"
+      summary: "api/articles"
+      operationId: "getArticles"
+      parameters: 
+        - $ref: "../schemas/common-schemas.yml#/components/parameters/limit"
+        - $ref: "../schemas/common-schemas.yml#/components/parameters/offset"
+      responses: 
+        200: 
+          description: ""
+          content: 
+            application/json: 
+              schema:
+                $ref: "../schemas/article-schemas.yml#/components/schemas/articles"
+              example: 
+                $ref: "../mockup/article-data.yml#/articles"
+        default: 
+          description: "Unexpected error"
+          content: 
+            application/json: 
+              schema:
+                $ref: "../schemas/common-schemas.yml#/components/schemas/ErrorModel"
+              example: 
+                message: "Sorry unable to perform operation."
+  /articles/{articleId}: 
+    get: 
+      security: []
+      tags: 
+        - "article"
+      summary: "api"
+      operationId: "getArticle"
+      parameters:
+        - $ref: "../schemas/article-schemas.yml#/components/parameters/articleId"
+      responses: 
+        200: 
+          description: ""
+          content: 
+            application/json: 
+              schema:
+                $ref: "../schemas/article-schemas.yml#/components/schemas/article"
+              example: 
+                $ref: "../mockup/article-data.yml#/article"
+        default: 
+          description: "Unexpected error"
+          content: 
+            application/json: 
+              example: 
+                message: "Sorry unable to perform operation."
+  /articles/{articleId}/comments: 
+    get: 
+      security: []
+      tags: 
+        - "article"
+      summary: "api"
+      operationId: "getComments"
+      parameters: 
+        - $ref: "../schemas/article-schemas.yml#/components/parameters/articleId"
+      responses: 
+        200: 
+          description: ""
+          content: 
+            application/json: 
+              schema: 
+                type: "object"
+                properties: 
+                  comments: 
+                    type: "array"
+                    items: {}
+              example: 
+                comments: []
+        default: 
+          description: "Unexpected error"
+          content: 
+            application/json: 
+              example: 
+                message: "Sorry unable to perform operation."

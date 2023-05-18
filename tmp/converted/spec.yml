@@ -1,0 +1,280 @@
+openapi: 3.0.2
+info:
+  title: API Title
+  version: '1.0'
+  license:
+    name: ''
+    url: .
+servers:
+  - url: 'https://api.server.test/v1'
+  - url: 'http://localhost:4010'
+paths:
+  /tags:
+    get:
+      security: []
+      tags:
+        - tags
+      summary: api/tags
+      operationId: getTags
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  tags:
+                    type: array
+                    items:
+                      type: string
+              example:
+                tags:
+                  - implementations
+                  - welcome
+                  - introduction
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              example:
+                message: Sorry unable to perform operation.
+  /articles:
+    get:
+      security: []
+      tags:
+        - article
+      summary: api/articles
+      operationId: getArticles
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: string
+          required: true
+          example: '100'
+        - in: query
+          name: offset
+          schema:
+            type: string
+          required: true
+          example: '0'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  articles:
+                    type: array
+                    items:
+                      $ref: '#/paths/~1articles~1%7BarticleId%7D/get/responses/200/content/application~1json/schema'
+                      required:
+                        - slug
+                        - title
+                        - description
+                        - body
+                        - tagList
+                        - createdAt
+                        - updatedAt
+                        - favorited
+                        - favoritesCount
+                        - author
+                  articlesCount:
+                    type: number
+              example:
+                articles:
+                  - slug: Deserunt-exercitationem-eos-facilis-in-sed-sunt-enim-id-blanditiis-voluptatibus-vel-maiores-quos-ullam-vitae-exercitationem-omnis-aliquid-fugiat.-Repellat-deserunt-blanditiis-unde.-Exercitationem-ducimus-nostrum-vitae-voluptatibus-qui-blanditiis-voluptatibus-quaerat-quae-sed-quaerat-consectetur-doloribus-omnis-quia-ipsum-aliquid-repellat-repellat-ullam-quaerat-deserunt-eos.-Quasi-consequuntur-voluptatem-sequi-vitae-sit-ipsum-qui-possimus-qui-vitae-repellat-doloribus-sit-occaecati-neque-nihil-voluptatibus-quaerat-dolores-magnam-rerum-reiciendis-sapiente.-Quasi-commodi-sapiente-ullam-eos-voluptatibus-hic-ipsum-exercitationem-unde-hic-occaecati-fugiat-sapiente-tenetur-consequuntur-enim-esse-omnis-exercitationem-dolores.-105569
+                    title: |
+                      Deserunt exercitationem eos facilis in sed sunt enim id blanditiis voluptatibus vel maiores quos ullam vitae exercitationem omnis aliquid fugiat.
+                      Repellat deserunt blanditiis unde.
+                      Exercitationem ducimus nostrum vitae voluptatibus qui blanditiis voluptatibus quaerat quae sed quaerat consectetur doloribus omnis quia, ipsum, aliquid repellat repellat ullam quaerat deserunt, eos.
+                      Quasi consequuntur voluptatem sequi, vitae sit ipsum qui possimus qui vitae repellat doloribus sit occaecati neque nihil voluptatibus quaerat dolores magnam, rerum reiciendis sapiente.
+                      Quasi commodi sapiente ullam eos voluptatibus, hic ipsum exercitationem unde hic occaecati fugiat, sapiente tenetur consequuntur enim esse omnis exercitationem dolores.
+                    description: Tempora id non maxime. Qui qui dignissimos omnis adipisci qui. Voluptatibus ut labore est quisquam consequuntur fugiat harum tenetur est. Repellendus quisquam quaerat error nobis voluptatem nihil minima. Autem aliquid ut adipisci officia eos atque excepturi.
+                    body: Pariatur quo neque est perspiciatis non illo rerum expedita minima.\nEt commodi voluptas eos ex.\nUnde velit delectus deleniti deleniti non in sit.\nAliquid voluptatem magni. Ducimus dolores recusandae.\nEa aut aperiam et aut eos inventore.\nQuia cum ducimus autem iste.\nQuos consequuntur est delectus temporibus autem. Deserunt ab porro similique est accusamus id enim aut suscipit.\nSoluta reprehenderit error nesciunt odit veniam sed.\nDolore optio qui aut ab.\nAut minima provident eius repudiandae a quibusdam in nisi quam. Voluptatem velit ut deserunt.\nQuibusdam eius repellat. Officia consectetur quibusdam velit debitis porro quia cumque.\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\nMollitia pariatur distinctio fugit. Provident saepe omnis non molestiae natus et.\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\nMollitia velit id eius mollitia occaecati repudiandae. Laborum est maxime enim accusantium magnam.\nRerum dolorum minus laudantium delectus eligendi necessitatibus quia.\nDeleniti consequatur explicabo aut nobis est vero tempore.\nExcepturi earum quo quod voluptatem quo iure vel sapiente occaecati.\nConsectetur consequatur corporis doloribus omnis harum voluptas esse amet. Ut in omnis sapiente laboriosam autem laborum.\nRepellendus et beatae qui qui numquam saepe.\nNon vitae molestias quos illum.\nSed fugiat qui ullam molestias ad ullam dolore.\nAutem ex minus distinctio dicta sapiente beatae veritatis at. Consequatur exercitationem asperiores quidem fuga rerum voluptas pariatur.\nRepellendus sit itaque nam.\nDeleniti consectetur vel aliquam vitae est velit.\nId blanditiis ullam sed consequatur omnis. Ipsa laudantium deserunt.
+                    tagList:
+                      - voluptate
+                      - quasi
+                      - ullam
+                    createdAt: '2022-10-09T10:07:29.447Z'
+                    updatedAt: '2022-10-09T10:07:29.447Z'
+                    favorited: false
+                    favoritesCount: 0
+                    author:
+                      username: Lyudmila Kjartansson
+                      bio: null
+                      image: 'https://api.realworld.io/images/demo-avatar.png'
+                      following: false
+                  - slug: Quos-omnis-dicta-quaerat-laborum-qui-aut-id-blanditiis-quos-hic-quasi.-Esse-voluptatem-quasi-beatae-rerum-beatae-id.-Nemo-ipsum-quia-dicta-quaerat-labore-esse-omnis-esse-sed-facilis-commodi-sed-sunt-reiciendis-excepturi-nostrum-voluptatibus-sunt-quaerat-exercitationem-vitae-commodi-voluptatem-aliquid-sapiente-omnis-blanditiis-commodi-dicta-fugit-fugiat-nostrum-labore-maiores-occaecati-qui-consequatur-consectetur-cupiditate-rerum-sunt-magnam-blanditiis-commodi-quos-quos-excepturi-laborum-voluptatibus.-Quos-sed-non-aut-fugiat-est-magnam-ullam-id-deserunt-fugit-facilis-deserunt-ullam-nemo-fugiat-reiciendis-esse-necessitatibus-qui-tenetur-quia-voluptate-sit-esse-et-quaerat-voluptatem-sed-beatae-numquam-est-esse-vitae-eos-fugit-consequuntur-beatae-quia-omnis-unde-fugiat-quaerat-non-est-dicta-voluptatem-eos-nulla-commodi.-Reiciendis-reiciendis-magnam-excepturi.-105569
+                    title: |
+                      Quos omnis dicta quaerat laborum qui aut id blanditiis quos hic quasi.
+                      Esse voluptatem quasi beatae rerum beatae id.
+                      Nemo ipsum quia dicta quaerat labore esse omnis esse sed facilis commodi sed sunt reiciendis excepturi nostrum voluptatibus sunt quaerat exercitationem vitae commodi voluptatem aliquid sapiente omnis blanditiis commodi dicta fugit fugiat nostrum labore maiores occaecati qui consequatur consectetur cupiditate rerum sunt magnam blanditiis commodi quos quos excepturi, laborum, voluptatibus.
+                      Quos sed non aut fugiat est magnam ullam id deserunt fugit facilis deserunt ullam nemo fugiat reiciendis esse necessitatibus qui tenetur quia voluptate, sit esse et quaerat voluptatem sed beatae numquam, est esse vitae eos fugit consequuntur beatae quia omnis unde fugiat quaerat non est dicta voluptatem eos nulla commodi.
+                      Reiciendis reiciendis magnam excepturi.
+                    description: Deserunt laboriosam quas autem repellat aspernatur ipsa accusamus pariatur deserunt. Nam aut eum vel ut. Sunt dicta id eveniet minus. Debitis temporibus quod.
+                    body: Laborum itaque quos provident.\nRerum cupiditate praesentium amet voluptatem dolor impedit modi dicta.\nVoluptates assumenda optio est.\nNon aperiam nam consequuntur vel a commodi dicta incidunt. Sapiente vitae culpa ut voluptatem incidunt excepturi voluptates exercitationem.\nSed doloribus alias consectetur omnis occaecati ad placeat labore.\nVoluptate consequatur expedita nemo recusandae sint assumenda.\nQui vel totam quia fugit saepe suscipit autem quasi qui.\nEt eum vel ut delectus ut nesciunt animi. Qui soluta veritatis autem repellat et inventore occaecati. Blanditiis non quos aut dolore nulla unde.\nIncidunt repudiandae amet eius porro.\nTempora unde sapiente repellat voluptatem omnis et ut omnis in.\nEt pariatur odit qui minima perspiciatis non dolores. Deleniti explicabo assumenda ipsum cumque voluptatem blanditiis voluptatum omnis provident.\nQuis placeat nisi fugit aperiam quaerat mollitia.\nOccaecati repellendus voluptate similique.\nLaboriosam qui qui voluptas itaque ipsa. Non enim expedita maiores incidunt voluptatem rem.\nEt nam vel nihil non non.\nVoluptates accusantium aut nisi et error doloribus molestiae voluptas soluta. Aut ipsa et qui vel similique sed hic a.\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Nemo tempore dolor maiores blanditiis quia qui qui voluptatem non.\nNisi dolores animi laboriosam aliquam qui adipisci voluptates atque dignissimos.\nLibero sit quibusdam corporis aut inventore natus libero.\nPraesentium omnis dolorum temporibus repellendus qui.\nNon nostrum doloribus occaecati dolores sit ut. Libero sed ut architecto.\nEx itaque et modi aut voluptatem alias quae.\nModi dolor cupiditate sit.\nDelectus consectetur nobis aliquid deserunt sint ut et voluptas.\nCorrupti in labore laborum quod. Dolores accusamus ducimus suscipit neque fugit quo aliquam.\nOdit eum eum sint accusamus.\nQuod ipsum sed placeat.\nEt culpa voluptas et quod atque a.\nVoluptatibus rerum nihil quia cupiditate nihil facere beatae dolor.
+                    tagList:
+                      - rerum
+                      - eos
+                      - ducimus
+                      - in
+                    createdAt: '2022-10-09T10:07:29.446Z'
+                    updatedAt: '2022-10-09T10:07:29.446Z'
+                    favorited: false
+                    favoritesCount: 1
+                    author:
+                      username: Lyudmila Kjartansson
+                      bio: null
+                      image: 'https://api.realworld.io/images/demo-avatar.png'
+                      following: false
+                  - slug: Occaecati-laborum-neque-neque-quae-occaecati-sed.-Asperiores-omnis-nihil-in-sunt-quas-voluptate-qui-dolores-reiciendis-repellat-facilis-quas-excepturi-maiores-facilis.-Beatae-fugiat-exercitationem-enim-error-voluptatibus-fugit-beatae-quos-asperiores-vitae-voluptatibus-unde-voluptate-sed-ducimus-vel-hic-aliquid-laborum-voluptatibus-repellat-numquam-maiores-laborum-error-fugit-nemo-nostrum-id-non-at-nulla-reiciendis-laborum-doloribus-vitae-non-et-vitae-nemo-quia-nihil-magnam-fugit-fugiat-nemo-sequi-fugit-nulla.-Nemo-laborum-numquam-sequi-commodi-occaecati-labore-reiciendis-excepturi-dolores-nihil-enim-dolores-sit-nulla-at-quasi-numquam-voluptate-necessitatibus-esse-sequi-enim-fugit-et-laborum-repellat-error-consequuntur-quaerat-exercitationem-quos-asperiores-dicta-sapiente-occaecati-esse-nemo-nihil-consequuntur-sed-ipsum-fugiat-deserunt-quaerat-sed-voluptate-consequatur-unde-quasi.-Vitae-aut-id-rerum-sunt-qui-magnam-quae-ipsum-laborum-voluptatem-beatae-quos-nulla-blanditiis-deserunt-cupiditate-labore-ullam-hic-consequuntur-possimus-possimus-est-sequi-neque-doloribus-esse-rerum-error-vel-fugit-sed-cupiditate-esse-quia-repellat-numquam-voluptatem-enim-ipsum-voluptate-sapiente-esse-error-occaecati-beatae-et-sunt.-105569
+                    title: |
+                      Occaecati laborum neque neque quae occaecati sed.
+                      Asperiores omnis nihil in sunt quas voluptate qui dolores reiciendis repellat facilis quas excepturi maiores facilis.
+                      Beatae fugiat exercitationem enim error voluptatibus fugit, beatae, quos asperiores, vitae voluptatibus unde voluptate sed ducimus vel hic aliquid laborum voluptatibus repellat numquam maiores laborum error, fugit nemo nostrum, id non at, nulla reiciendis laborum doloribus vitae non, et vitae, nemo quia nihil magnam fugit fugiat nemo sequi fugit nulla.
+                      Nemo laborum numquam sequi, commodi occaecati labore reiciendis, excepturi dolores nihil enim dolores sit, nulla at quasi numquam voluptate necessitatibus esse, sequi enim fugit et laborum repellat error, consequuntur quaerat, exercitationem quos asperiores dicta sapiente occaecati esse nemo nihil, consequuntur, sed ipsum fugiat deserunt quaerat sed, voluptate consequatur unde quasi.
+                      Vitae aut id rerum sunt qui magnam quae ipsum laborum voluptatem, beatae quos nulla blanditiis, deserunt cupiditate labore ullam, hic consequuntur possimus possimus est sequi neque doloribus esse rerum error vel fugit sed cupiditate esse quia, repellat numquam voluptatem enim ipsum voluptate sapiente esse error occaecati beatae et sunt.
+                    description: Similique molestiae id officia corporis quidem. Aliquam et ut eos ut nemo est voluptatem. Possimus ut quo labore. Alias amet quia enim. Quia ipsum pariatur facere illum esse recusandae veniam. Nihil enim fugit porro nam et quis sunt.
+                    body: In ipsam mollitia placeat quia adipisci rerum labore repellat. Iusto laborum aperiam neque delectus consequuntur provident est maiores explicabo. In ipsam mollitia placeat quia adipisci rerum labore repellat. Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Quia consequatur voluptatibus et.\nVoluptatibus aspernatur et.\nDicta architecto qui dignissimos.\nVeritatis facilis voluptatem inventore aliquid cum.\nNumquam odio quis porro sunt adipisci culpa. Officia consectetur quibusdam velit debitis porro quia cumque.\nSuscipit esse voluptatem cum sit totam consequatur molestiae est.\nMollitia pariatur distinctio fugit. Nisi vitae nostrum perspiciatis impedit laborum repellat ullam et ut. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\nAspernatur cumque labore voluptates mollitia deleniti et. Exercitationem suscipit enim et aliquam dolor. Quia consequatur voluptatibus et.\nVoluptatibus aspernatur et.\nDicta architecto qui dignissimos.\nVeritatis facilis voluptatem inventore aliquid cum.\nNumquam odio quis porro sunt adipisci culpa.
+                    tagList:
+                      - dolores
+                      - est
+                      - quaerat
+                      - magnam
+                    createdAt: '2022-10-09T10:07:29.446Z'
+                    updatedAt: '2022-10-09T10:07:29.446Z'
+                    favorited: false
+                    favoritesCount: 0
+                    author:
+                      username: Lyudmila Kjartansson
+                      bio: null
+                      image: 'https://api.realworld.io/images/demo-avatar.png'
+                      following: false
+                articlesCount: 197
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  code:
+                    type: string
+              example:
+                message: Sorry unable to perform operation.
+  '/articles/{articleId}':
+    get:
+      security: []
+      tags:
+        - article
+      summary: api
+      operationId: getArticle
+      parameters:
+        - name: articleId
+          in: path
+          description: The name that needs to be fetched
+          required: true
+          schema:
+            type: string
+            example: If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  article:
+                    type: object
+                    properties:
+                      slug:
+                        type: string
+                      title:
+                        type: string
+                      description:
+                        type: string
+                      body:
+                        type: string
+                      tagList:
+                        type: array
+                        items:
+                          type: string
+                      createdAt:
+                        type: string
+                      updatedAt:
+                        type: string
+                      favorited:
+                        type: boolean
+                      favoritesCount:
+                        type: number
+                      author:
+                        type: object
+                        properties:
+                          username:
+                            type: string
+                          bio:
+                            type: string
+                            nullable: true
+                          image:
+                            type: string
+                          following:
+                            type: boolean
+              example:
+                article:
+                  slug: If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863
+                  title: 'If we quantify the alarm, we can get to the FTP pixel through the online SSL interface!'
+                  description: Omnis perspiciatis qui quia commodi sequi modi. Nostrum quam aut cupiditate est facere omnis possimus. Tenetur similique nemo illo soluta molestias facere quo. Ipsam totam facilis delectus nihil quidem soluta vel est omnis.
+                  body: Quia quo iste et aperiam voluptas consectetur a omnis et.\nDolores et earum consequuntur sunt et.\nEa nulla ab voluptatem dicta vel. Temporibus aut adipisci magnam aliquam eveniet nihil laudantium reprehenderit sit.\nAspernatur cumque labore voluptates mollitia deleniti et. Quos pariatur tenetur.\nQuasi omnis eveniet eos maiores esse magni possimus blanditiis.\nQui incidunt sit quos consequatur aut qui et aperiam delectus.\nPraesentium quas culpa.\nEaque occaecati cumque incidunt et. Provident saepe omnis non molestiae natus et.\nAccusamus laudantium hic unde voluptate et sunt voluptatem.\nMollitia velit id eius mollitia occaecati repudiandae. Voluptatum tempora voluptas est odio iure odio dolorem.\nVoluptatum est deleniti explicabo explicabo harum provident quis molestiae. Sed dolores nostrum quis. Aut ipsa et qui vel similique sed hic a.\nVoluptates dolorem culpa nihil aut ipsam voluptatem. Cupiditate officia voluptatum.\nTenetur facere eum distinctio animi qui laboriosam.\nQuod sed voluptatem et cumque est eos.\nSint id provident suscipit harum odio et. Facere beatae delectus ut.\nPossimus voluptas perspiciatis voluptatem nihil sint praesentium.\nSint est nihil voluptates nesciunt voluptatibus temporibus blanditiis.\nOfficiis voluptatem earum sed. Deserunt ab porro similique est accusamus id enim aut suscipit.\nSoluta reprehenderit error nesciunt odit veniam sed.\nDolore optio qui aut ab.\nAut minima provident eius repudiandae a quibusdam in nisi quam.
+                  tagList:
+                    - rerum
+                    - maiores
+                    - omnis
+                  createdAt: '2022-12-09T13:46:24.264Z'
+                  updatedAt: '2022-12-09T13:46:24.264Z'
+                  favorited: false
+                  favoritesCount: 1131
+                  author:
+                    username: Anah Benešová
+                    bio: null
+                    image: 'https://api.realworld.io/images/demo-avatar.png'
+                    following: false
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              example:
+                message: Sorry unable to perform operation.
+  '/articles/{articleId}/comments':
+    get:
+      security: []
+      tags:
+        - article
+      summary: api
+      operationId: getComments
+      parameters:
+        - $ref: '#/paths/~1articles~1%7BarticleId%7D/get/parameters/0'
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  comments:
+                    type: array
+                    items: {}
+              example:
+                comments: []
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              example:
+                message: Sorry unable to perform operation.

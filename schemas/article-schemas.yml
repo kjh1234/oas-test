@@ -1,0 +1,78 @@
+openapi: "3.0.0"
+info:
+  title: API Title
+  version: '1.0'
+servers: 
+  - url: http://localhost:4010
+paths: 
+  /dummy:
+    summary: "dummy"
+components: 
+  parameters: 
+    articleId: 
+      name: articleId
+      in: path
+      description: The name that needs to be fetched
+      required: true
+      schema:
+        type: string
+        example: "If-we-quantify-the-alarm-we-can-get-to-the-FTP-pixel-through-the-online-SSL-interface!-120863"
+  schemas: 
+    articles:
+      type: "object"
+      properties:
+        articles:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/article"
+            required:
+              - "slug"
+              - "title"
+              - "description"
+              - "body"
+              - "tagList"
+              - "createdAt"
+              - "updatedAt"
+              - "favorited"
+              - "favoritesCount"
+              - "author"
+        articlesCount:
+          type: "number"
+    article: 
+      type: "object"
+      properties: 
+        article: 
+          type: "object"
+          properties: 
+            slug: 
+              type: "string"
+            title: 
+              type: "string"
+            description: 
+              type: "string"
+            body: 
+              type: "string"
+            tagList: 
+              type: "array"
+              items: 
+                type: "string"
+            createdAt: 
+              type: "string"
+            updatedAt: 
+              type: "string"
+            favorited: 
+              type: "boolean"
+            favoritesCount: 
+              type: "number"
+            author: 
+              type: "object"
+              properties: 
+                username: 
+                  type: "string"
+                bio: 
+                  type: "string"
+                  nullable: true
+                image: 
+                  type: "string"
+                following: 
+                  type: "boolean"      

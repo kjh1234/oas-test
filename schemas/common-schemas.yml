@@ -1,0 +1,31 @@
+openapi: "3.0.0"
+info:
+  title: API Title
+  version: '1.0'
+servers: 
+  - url: http://localhost:4010
+paths: 
+  /dummy:
+    summary: "dummy"
+components: 
+  parameters: 
+    limit: 
+      in: "query"
+      name: "limit"
+      schema: 
+        type: "string"
+      required: true
+      example: "100"
+    offset:
+      in: "query"
+      name: "offset"
+      schema: 
+        type: "string"
+      required: true
+      example: "0"
+  schemas: 
+    ErrorModel: 
+      type: "object"
+      properties: 
+        code: 
+          type: "string"

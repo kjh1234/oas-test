@@ -1,0 +1,8 @@
+local: ./openapi.trg.yml
+baseUrl: 'http://localhost:4010'
+output: ./tmp/out.json
+portmanConfigFile: ./test/portman-config.yml
+includeTests: true
+syncPostman: false
+runNewman: true
+oaRename: 'Open API - Test suite'

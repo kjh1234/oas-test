@@ -1,0 +1,22 @@
+openapi: '3.0.2'
+info:
+  title: API Title
+  version: '1.0'
+  license: 
+    name: ""
+    url: "."
+    
+servers:
+  - url: https://api.server.test/v1
+  - url: http://localhost:4010
+    
+
+paths:
+  /tags:
+    $ref: "./paths/tag-paths.yml#/paths/~1tags"
+  /articles:
+    $ref: "./paths/article-paths.yml#/paths/~1articles"
+  /articles/{articleId}:
+    $ref: "./paths/article-paths.yml#/paths/~1articles~1{articleId}"
+  /articles/{articleId}/comments:
+    $ref: "./paths/article-paths.yml#/paths/~1articles~1{articleId}~1comments"
