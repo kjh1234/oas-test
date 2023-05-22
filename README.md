@@ -36,6 +36,9 @@ npx @openapitools/openapi-generator-cli generate -i https://raw.githubuserconten
 
 # spring client feign source generator
 npx @openapitools/openapi-generator-cli generate -i https://raw.githubusercontent.com/kjh1234/oas-test/0.2/openapi.trg.yml -g spring --library spring-cloud  -o /samples/client/oas-test/java
+
+# spring MVC Server source generator
+npx @openapitools/openapi-generator-cli generate -i https://raw.githubusercontent.com/kjh1234/oas-test/0.2/openapi.trg.yml -g spring --library spring-boot  -o /samples/server/oas-test/java
 ```
 
 ## API Test
