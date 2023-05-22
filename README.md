@@ -1,10 +1,10 @@
 
 ## OpenAPI편집에 유용한 확장기능
 #### (**)주요기능
-OpenAPI (Swagger) Editor: UI Editor, **UI Preview(swagger, redoc), **간편실행
-Redocly OpenAPI: **Editor Option($ref, inteliSense), **참조 미리보기
-openapi-designer: UI Preview(swagger), Editor Option(inteliSense), **API 문서 병합  
-YAML to JSON Converter: **YAML <-> JSON 변환(단점: 변경전 파일을 삭제함, 이름이 기존과 동일하게 고정)
+ - OpenAPI (Swagger) Editor: UI Editor, **UI Preview(swagger, redoc), **간편실행
+ - Redocly OpenAPI: **Editor Option($ref, inteliSense), **참조 미리보기
+ - openapi-designer: UI Preview(swagger), Editor Option(inteliSense), **API 문서 병합  
+ - YAML to JSON Converter: **YAML <-> JSON 변환(단점: 변경전 파일을 삭제함, 이름이 기존과 동일하게 고정)s
 
 ## API 병합
 ```bash
